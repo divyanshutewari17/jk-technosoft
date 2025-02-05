@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import '../css/PostDetail.css';
+import Navbar from './Navbar';
 
 const PostDetail = () => {
   const { id } = useParams();
@@ -27,11 +28,13 @@ const PostDetail = () => {
     return <div>Loading...</div>;
   }
 
-  return (
+  return (<>
+    <Navbar/>
     <div className="post-detail-container">
       <h1 className="post-detail-title">{post.title}</h1>
       <p className="post-detail-body">{post.body}</p>
     </div>
+    </>
   );
 };
 

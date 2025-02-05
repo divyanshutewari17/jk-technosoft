@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../css/CreatePost.css';
+import Navbar from './Navbar';
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');
@@ -24,7 +25,8 @@ const CreatePost = () => {
     }
   };
 
-  return (
+  return (<>
+    <Navbar/>
     <div className="create-post-container">
       <h1 className="create-post-title">Create Post</h1>
       <form className="create-post-form" onSubmit={handleSubmit}>
@@ -48,6 +50,7 @@ const CreatePost = () => {
         <button type="submit" className="create-post-button">Create</button>
       </form>
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../css/Dashboard.css';
+import Navbar from './Navbar';
 
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
@@ -23,7 +24,8 @@ const Dashboard = () => {
     fetchPosts();
   }, []);
 
-  return (
+  return (<>
+    <Navbar/>
     <div className="dashboard-container">
       <h1 className="dashboard-title">Dashboard</h1>
       <button className="create-post-button" onClick={() => navigate('/create-post')}>
@@ -38,6 +40,7 @@ const Dashboard = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
