@@ -1,0 +1,17 @@
+.post-detail-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .post-detail-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .post-detail-body {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
